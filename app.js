@@ -16,9 +16,14 @@ db.on("error",()=>{console.log("houve um Erro")});
 
 db.once("open",()=>{console.log("Banco de Dados Carregado")});
 
+
+//Setando o diretório Público  !Importante
+app.use(express.static('public'))
+
 //Setando o EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'templates'));
+
 
 app.use('/', linkRoute);
 
