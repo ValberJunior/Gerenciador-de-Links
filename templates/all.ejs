@@ -14,13 +14,57 @@
     <link href='public/css/style' rel='stylesheet' type='text/css'> <!--O CSS ainda não está carregando-->
     
 </head>
-<body>
+<body class='bg-light'>
 
-<div class='container'>   
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+        <div class="container-fluid">
+            <a class="navbar-brand"><h2 style="font-family: 'Lobster', cursive;" class='text-warning'> Gerenciador de Links</h2></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end me-3" id="navbarNav">
+
+            <ul class="navbar-nav text-center">
+              <li class="nav-item mb-2">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link" href="#links">Links</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link" href="#contacts">Contato</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+      <!--Search-->
+    <div class="bg-info d-flex justify-content-center align-items-center" style='width: 100%; height: 400px;'>         
+         
+        <div class='d-flex flex-column'>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style='width: 350px;'>
+            <button class="btn btn-dark" type="submit">Search</button>
+          </form>
+
+          <div class='mt-3 d-flex justify-content-center'>
+          <a href='add' class='btn btn-primary p-3'>Adicionar Link <i class="fas fa-plus"></i></a> 
+         </div>
+
+        </div>
+
+    </div>
+
+<div class='container p-3'>   
     
-<h1 style="font-family: 'Lobster', cursive;">Links</h1>
-<a href='add' class='btn btn-primary'>Adicionar Link <i class="fas fa-plus"></i></a> 
 
+<section id='links'>
 
 <% for(let i=0; i < links.length; i++){%>
 
@@ -46,8 +90,25 @@
 
 <%}%>
 
+</section>
 
 </div> 
+
+<svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 110" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(33, 37, 41, 1)" offset="0%"></stop><stop stop-color="rgba(33, 37, 41, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,55L60,51.3C120,48,240,40,360,40.3C480,40,600,48,720,53.2C840,59,960,62,1080,67.8C1200,73,1320,81,1440,73.3C1560,66,1680,44,1800,36.7C1920,29,2040,37,2160,36.7C2280,37,2400,29,2520,38.5C2640,48,2760,73,2880,84.3C3000,95,3120,92,3240,78.8C3360,66,3480,44,3600,29.3C3720,15,3840,7,3960,5.5C4080,4,4200,7,4320,12.8C4440,18,4560,26,4680,34.8C4800,44,4920,55,5040,64.2C5160,73,5280,81,5400,84.3C5520,88,5640,88,5760,73.3C5880,59,6000,29,6120,25.7C6240,22,6360,44,6480,47.7C6600,51,6720,37,6840,40.3C6960,44,7080,66,7200,73.3C7320,81,7440,73,7560,67.8C7680,62,7800,59,7920,49.5C8040,40,8160,26,8280,33C8400,40,8520,70,8580,84.3L8640,99L8640,110L8580,110C8520,110,8400,110,8280,110C8160,110,8040,110,7920,110C7800,110,7680,110,7560,110C7440,110,7320,110,7200,110C7080,110,6960,110,6840,110C6720,110,6600,110,6480,110C6360,110,6240,110,6120,110C6000,110,5880,110,5760,110C5640,110,5520,110,5400,110C5280,110,5160,110,5040,110C4920,110,4800,110,4680,110C4560,110,4440,110,4320,110C4200,110,4080,110,3960,110C3840,110,3720,110,3600,110C3480,110,3360,110,3240,110C3120,110,3000,110,2880,110C2760,110,2640,110,2520,110C2400,110,2280,110,2160,110C2040,110,1920,110,1800,110C1680,110,1560,110,1440,110C1320,110,1200,110,1080,110C960,110,840,110,720,110C600,110,480,110,360,110C240,110,120,110,60,110L0,110Z"></path></svg>
+
+<footer class='bg-dark d-flex flex-column justify-content-center align-items-center' style='width: 100%; height: 250px;'>
+
+    <div class='d-flex' id='contacts'>
+        <a href='https://github.com/ValberJunior/'><i class="fab fa-linkedin text-warning fs-1 m-2"></i></a>
+        <a href='https://www.linkedin.com/in/valber-junior-238217b4/'><i class="fab fa-github text-warning fs-1 m-2"></i></a>
+    </div>
+
+    <div class='mt-5'>
+        <span class='text-light fs-5 p-2' style='border-top: 2px solid rgba(255, 255, 255, 0.342)'>Desenvolvido por Valber Júnior <i class="far fa-copyright"></i></span>
+    </div>
+
+
+</footer>
 <!--Bootstrap-->
 <!--JS-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
