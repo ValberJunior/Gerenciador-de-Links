@@ -15,7 +15,7 @@ router.get('/', linkController.allLinks);
 
 //Add
 router.get('/add', (req, res)=>{
-    res.render('index',{ error: false, body: {} });
+    res.render('add',{ error: false, body: {} });
   }) 
 
 //ler documentos após o usuário fazer uma requisição
