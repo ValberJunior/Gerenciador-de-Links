@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+</head>
+<body>
+    
+<h1>Links</h1>
+<a href='add'>Adicionar Link</a> 
+
+
+<% for(let i=0; i < links.length; i++){%>
+
+    <div id='<%=links[i]._id%>'>
+        <form method="POST" action="/<%=links[i]._id%>?_method=DELETE">
+
+        <h2><%=links[i].title%></h2>
+        <div><%=links[i].description%></div>
+        <div><%=links[i].url%></div>
+        <button type='submit'>Delete</button>
+        <a href='/edit/<%=links[i]._id%>'>Edit</a>
+
+       </form>
+    </div>
+
+<%}%>
+
+
+
+</script>
+
+</body>
+</html>
