@@ -4,24 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection</title>
+    <title>Add Link</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    
-<script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 style="font-family: 'Lobster', cursive;">Meus Links <i class="fab fa-suse"></i></h1>
+    <div class='container  w-50'>
+    <h1 style="font-family: 'Lobster', cursive;" class='text-center p-3'>Adicione um Link <i class="fas fa-plus-circle text-primary"></i></h1>
 
-    <form action="/" method='POST'>
-        <input type='text' class='field' name='title' placeholder='Título' value='<%=body.title%>'>
-        <input type='text' class='field' name='description' placeholder='Descrição' value='<%=body.description%>' >
-        <input type='text' class='field' name='url' placeholder='URL' value='<%=body.url%>'>
-        <button>Save</button>
+    <form action="/" method='POST' class='d-flex flex-column'>
+        <input type='text' class='m-2 p-2' name='title' placeholder='Título' value='<%=body.title%>'>
+        <input type='text' class='m-2 p-2' name='description' placeholder='Descrição' value='<%=body.description%>' >
+        <input type='text' class='m-2 p-2' name='url' placeholder='URL' value='<%=body.url%>'>
+        <button class='btn btn-primary m-2 p-3'> ADD <i class="fas fa-plus-circle"></i></button>
+        <a href='/' class='btn btn-primary m-2 p-3'> BACK <i class="fas fa-undo"></i></a>
     </form>
 
     <%if(error){%>
-        <h3><%=error.message%></h3>
+    <div class='alert alert-danger alert-dismissible mt-3 p-4 d-flex fade show'>
+  
+        <div class='d-flex flex-column'><strong class='mb-2'>Error: </strong> <%=error.message%></div>
+        <a href='#' class='close' data-bs-dismiss='alert'><i class="fas fa-times"></i></a>
+
+    </div>
     <%}%>
+
+    </div>
+
+    <!--Bootstrap-->
+        <!--JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
