@@ -15,8 +15,12 @@
     
 <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class='container  w-50'>
+<body class='bg-light'>
+
+    <!--Nav-->
+    <%-include('./partials/navbar.ejs');%> 
+
+    <div class='container  w-50 mt-5 mb-5'>
     <h1 style="font-family: 'Lobster', cursive;" class='text-center p-3'>Editar Link  <i class="far fa-edit"></i></h1>
     
     <form action="/edit/<%=body.id%>" method='POST' class='d-flex flex-column'>
@@ -38,7 +42,8 @@
 
     </div>    
 
-<!--Esse arquivo foi criado para apresentar na tela a opção de edição dos links-->
+<!--footer-->
+<%-include('./partials/footer.ejs');%> 
 
 <!--Bootstrap-->
 <!--JS-->

@@ -12,16 +12,22 @@
     <!--Icons-->
     <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class='container  w-50'>
+<body class='bg-light'>
+
+<!--Nav-->
+<%-include('./partials/navbar.ejs');%> 
+
+    <div class='container w-50 mt-5 mb-5'>
     <h1 style="font-family: 'Lobster', cursive;" class='text-center p-3'>Adicione um Link <i class="fas fa-plus-circle text-primary"></i></h1>
 
     <form action="/" method='POST' class='d-flex flex-column'>
         <input type='text' class='m-2 p-2' name='title' placeholder='Título' value='<%=body.title%>' required>
         <input type='text' class='m-2 p-2' name='description' placeholder='Descrição' value='<%=body.description%>' >
         <input type='text' class='m-2 p-2' name='url' placeholder='URL' value='<%=body.url%>' required>
+
         <button class='btn btn-primary m-2 p-3'> ADD <i class="fas fa-plus-circle"></i></button>
         <a href='/' class='btn btn-primary m-2 p-3'> BACK <i class="fas fa-undo"></i></a>
+      
     </form>
 
     <%if(error){%>
@@ -34,6 +40,9 @@
     <%}%>
 
     </div>
+
+    <!--footer-->
+    <%-include('./partials/footer.ejs');%> 
 
     <!--Bootstrap-->
         <!--JS-->
