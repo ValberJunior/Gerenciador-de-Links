@@ -20,9 +20,9 @@
     <h1 style="font-family: 'Lobster', cursive;" class='text-center p-3'>Editar Link  <i class="far fa-edit"></i></h1>
     
     <form action="/edit/<%=body.id%>" method='POST' class='d-flex flex-column'>
-        <input type='text' class='m-2 p-2' name='title' placeholder='Título' value='<%=body.title%>'>
+        <input type='text' class='m-2 p-2' name='title' placeholder='Título' value='<%=body.title%>' required>
         <input type='text' class='m-2 p-2' name='description' placeholder='Descrição' value='<%=body.description%>' >
-        <input type='text' class='m-2 p-2' name='url' placeholder='URL' value='<%=body.url%>'>
+        <input type='text' class='m-2 p-2' name='url' placeholder='URL' value='<%=body.url%>' required>
         <button class='btn btn-primary m-2 p-3'> SAVE <i class="far fa-save"></i></button>
         <a href='/' class='btn btn-primary m-2 p-3'> BACK <i class="fas fa-undo"></i></a>
     </form>
