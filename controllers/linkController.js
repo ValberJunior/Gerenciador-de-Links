@@ -8,7 +8,6 @@ const redirect = async (req, res)=>{
     try{
     let doc = await Link.findOneAndUpdate({title}, {$inc:{click:1}});
     
-     console.log(doc);
     
      res.redirect(doc.url);
     

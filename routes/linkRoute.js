@@ -23,10 +23,12 @@ router.get('/:title', linkController.redirect )
 
 //Edit
 router.get('/edit/:id', linkController.loadLink);
-router.post('/edit:id',express.urlencoded({extended:true}), linkController.editLink)
+
  
 
 router.post('/', express.urlencoded({extended:true}), linkController.addLink);
+
+router.post('/edit:id',express.urlencoded({extended:true}), linkController.editLink)
 
 //Rota para deletar documentos
 
