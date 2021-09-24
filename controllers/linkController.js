@@ -100,5 +100,22 @@ const editLink = async (req, res)=>{
     }
 }
 
+const searchLink = async (req, res)=>{              //<<<<<<<<< Trabalhando aqui
 
-module.exports = {redirect , addLink, allLinks, deleteLink, loadLink, editLink};
+    let title = req.params.title;
+
+    if(!title){
+        title = req.body.title;
+    }
+
+    try{
+        let doc = await Link.findOne({title});
+        res.render('search', {link: doc});
+    }
+    catch(error){
+        res.render('search',{error, body: req.body});
+    }
+
+}
+
+module.exports = {redirect , addLink, allLinks, deleteLink, loadLink, editLink, searchLink};
