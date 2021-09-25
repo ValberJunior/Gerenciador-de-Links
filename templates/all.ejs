@@ -17,7 +17,7 @@
 <body class='bg-light'>
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2" id='start'>
         <div class="container-fluid">
             <a class="navbar-brand"><h2 style="font-family: 'Lobster', cursive;" class='text-warning'> Gerenciador de Links</h2></a>
 
@@ -48,8 +48,8 @@
          
         <div class='d-flex flex-column'>
 
-          <form class="d-flex" action="/" method='POST'>
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style='width: 350px;'>
+          <form class="d-flex" action="/search" method='POST'>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style='width: 350px;' required>
             <button class="btn btn-dark" type="submit"><i class="fas fa-search"></i></button>
           </form>
 

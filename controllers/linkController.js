@@ -102,20 +102,27 @@ const editLink = async (req, res)=>{
 
 const searchLink = async (req, res)=>{              //<<<<<<<<< Trabalhando aqui
 
+    let link = {};
     let title = req.params.title;
+    
+    link.description = req.body.description;
+    link.url = req.body.url;
+    link.id = req.body.id;
 
     if(!title){
         title = req.body.title;
     }
 
     try{
-        let doc = await Link.findOne({title});
-        res.render('search', {link: doc});
+        let doc = await Link.findOne({title: title}, link);
+        res.render('/', {link: doc});
     }
     catch(error){
-        res.render('search',{error, body: req.body});
+        res.render('/search',{error, body: req.body});
     }
 
 }
+
+
 
 module.exports = {redirect , addLink, allLinks, deleteLink, loadLink, editLink, searchLink};

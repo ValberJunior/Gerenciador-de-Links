@@ -20,9 +20,7 @@ router.get('/add', (req, res)=>{
 
 
 //search                                                      <<<<<<< trabalhando nisso
-router.get('/search', (req, res)=>{
-  res.render('search', {error: false, body:{}});
-})
+router.get('/search/:id', linkController.searchLink);
 
 //ler documentos após o usuário fazer uma requisição
 router.get('/:title', linkController.redirect )
@@ -34,7 +32,7 @@ router.get('/edit/:id', linkController.loadLink);
 
 router.post('/', express.urlencoded({extended:true}), linkController.addLink);
 
-router.post('/', express.urlencoded({extended:true}),  linkController.searchLink)
+router.post('/search:id', express.urlencoded({extended:true}),  linkController.searchLink)
 
 router.post('/edit:id',express.urlencoded({extended:true}), linkController.editLink)
 
