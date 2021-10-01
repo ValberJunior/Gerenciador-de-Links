@@ -7,6 +7,9 @@ const linkController = require('../controllers/linkController');
 
 //Rotas
 
+//Setando o diretório Público  !Importante  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+router.use(express.static('public'));
+
 router.use(methodOverride('_method')); //Method Override como Middleware
 
 //Todos os links
