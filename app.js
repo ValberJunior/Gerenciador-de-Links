@@ -21,6 +21,8 @@ db.once("open",()=>{console.log("Banco de Dados Carregado")});
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'templates'));
 
+app.set(express.static('public'));  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! << Rota estática 
+
 
 app.use('/', linkRoute);
 

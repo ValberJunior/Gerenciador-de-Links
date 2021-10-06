@@ -102,26 +102,17 @@ const editLink = async (req, res)=>{
 
 const searchLink = async (req, res)=>{              //<<<<<<<<< Trabalhando aqui
 
-    let link = {};
-    let title = req.params.title;
-    
-    link.description = req.body.description;
-    link.url = req.body.url;
-    link.id = req.body.id;
+   let researched_value = req.query.searchBar;
 
-    if(!title){
-        title = req.body.title;
-    }
+   //filter by title
+   let docs = await Link.find({title: {$regex: researched_value, $options: "$i"}, });
 
-    try{
-        let doc = await Link.findOne({title: title}, link);
-        res.render('/', {link: doc});
-    }
-    catch(error){
-        res.render('/search',{error, body: req.body});
-    }
-
-}
+   try{
+       res.render('search', {links: docs});
+   } catch(error){
+       res.status(404).send(error.message);
+   }
+};
 
 
 
