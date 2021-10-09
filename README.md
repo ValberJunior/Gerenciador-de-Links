@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/84424883/136640336-b5c2e5bb-6cfd-4698-
 
 
 
-##👉 Ferramenta para gerenciar links e cliques através de uma rota configurada dentro do NodeJs e salva em um servidor de nuvem do Mongodb (MongoAtlas). Interface estruturada com EJS e alimentada por JS com informações colhidas do Mongo, Estilizada pelo Bootstrap5.
+## 👉 Ferramenta para gerenciar links e cliques através de uma rota configurada dentro do NodeJs e salva em um servidor de nuvem do Mongodb (MongoAtlas). Interface estruturada com EJS e alimentada por JS com informações colhidas do Mongo, Estilizada pelo Bootstrap5.
 
 ### Tecnologias Utilizadas:<br>
 - Bootstrap5;
