@@ -20,7 +20,7 @@ router.get('/add', (req, res)=>{
   }) 
 
 
-//search                                                      <<<<<<< trabalhando nisso
+//search                                                    
 router.get('/search', linkController.searchLink);
 
 //ler documentos após o usuário fazer uma requisição

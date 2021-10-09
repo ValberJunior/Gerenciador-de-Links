@@ -100,7 +100,7 @@ const editLink = async (req, res)=>{
     }
 }
 
-const searchLink = async (req, res)=>{              //<<<<<<<<< Trabalhando aqui
+const searchLink = async (req, res)=>{             
 
    let researched_value = req.query.searchBar;
 
